@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  margin: 15rem auto;
+  width: 25rem;
+  height: 45rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 10px;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 2px 2px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  position: relative;
+}
+
+.eq-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0; /*to make it invisible*/
+  transition: all 0.4s ease;
+  background-color: hsl(180, 100%, 50%, 0.5);
+  border-radius: 10px;
+}
+
+.card-img:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.icon {
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  text-align: center;
+}
+
+.topic {
+  margin-top: 1.2rem;
+  font-size: 1.8rem;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.topic:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.description {
+  font-size: 1.4rem;
+  color: hsl(215, 51%, 70%);
+  font-weight: 200;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8rem 0;
+}
+
+.data-left,
+.data-right {
+  display: flex;
+  align-items: center;
+}
+
+.data-value {
+  color: hsl(178, 100%, 50%);
+  font-size: 1.2rem;
+}
+
+.time-value {
+  color: hsl(215, 51%, 70%);
+  font-size: 1.2rem;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 0.5px solid hsl(215, 32%, 27%);
+  padding: 1.2rem 0;
+}
+
+.avatar-img {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.text {
+  color: hsl(215, 51%, 70%);
+}
+
+.sub-text {
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.sub-text:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+@media (max-width: 23em) {
+  .card {
+    width: 80%;
+    height: 45rem;
+  }
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
